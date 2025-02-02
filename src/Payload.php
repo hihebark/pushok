@@ -169,6 +169,13 @@ class Payload implements \JsonSerializable
      */
     private $contentState;
 
+    /**
+     * Custom Aps Attributes
+     *
+     * @var array
+     */
+    private $customApsAttributes;
+
     protected function __construct()
     {
     }
@@ -573,6 +580,30 @@ class Payload implements \JsonSerializable
     }
 
     /**
+     * Set custom Aps attributes for Payload.
+     *
+     * @param array $customApsAttributes
+     * @return Payload
+     */
+
+    public function setCustomApsAttributtes($customApsAttributes)
+    {
+        $this->customApsAttributes = $customApsAttributes;
+
+        return $this;
+    }
+
+    /**
+     * Get custom Aps attributes for Payload.
+     *
+     * @return array
+     */
+    public function getCustomApsAttributes()
+    {
+        return $this->customApsAttributes;
+    }
+
+    /**
      * Set event for Payload.
      *
      * @param string $event
@@ -686,6 +717,12 @@ class Payload implements \JsonSerializable
 
         if (is_double($this->relevanceScore)) {
             $payload[self::PAYLOAD_ROOT_KEY]->{self::PAYLOAD_RELEVANCE_SCORE_KEY} = $this->relevanceScore;
+        }
+
+        if (is_array($this->customApsAttributes)) {
+            foreach ($this->customApsAttributes as $key => $value) {
+                $payload[self::PAYLOAD_ROOT_KEY]->{$key} = $value;
+            }
         }
 
         return $payload;

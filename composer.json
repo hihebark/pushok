@@ -1,5 +1,5 @@
 {
-    "name": "edamov/pushok",
+    "name": "hihebark/pushok",
     "type": "library",
     "description": "PHP client for Apple Push Notification Service (APNs) - Send push notifications to iOS using the new APNs HTTP/2 protocol with token-based (JWT with p8 private key) or certificate-based authentication",
     "keywords": [
@@ -8,13 +8,13 @@
         "p8",
         "php apns"
     ],
-    "homepage": "https://github.com/edamov/pushok",
+    "homepage": "https://github.com/hihebark/pushok",
     "license": "MIT",
     "authors": [
         {
-            "name": "Artur Edamov",
-            "email": "edamov@gmail.com",
-            "homepage": "https://github.com/edamov",
+            "name": "Amara Nezli",
+            "email": "hihebark@gmail.com",
+            "homepage": "https://github.com/hihebark",
             "role": "Developer"
         }
     ],
@@ -42,7 +42,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "edamov\\pushok\\": "tests"
+            "hihebark\\pushok\\": "tests"
         }
     },
     "extra": {
