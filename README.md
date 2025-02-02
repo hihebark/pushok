@@ -36,7 +36,7 @@ Or you can follow [this tutorial](https://nathanleclaire.com/blog/2016/08/11/cur
 Via Composer
 
 ``` bash
-$ composer require edamov/pushok
+$ composer require hihebark/pushok
 ```
 
 ## Getting Started
